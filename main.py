@@ -21,7 +21,9 @@ def get_book_text(path):
         return f.read()
 
 def book_report(path, count, alphabet):
+    #sort the dictionary based on value desc
     alphabet = dict(sorted(alphabet.items(), key=lambda item: item[1], reverse=True))
+    #start of the report 
     print(f"--- Begin report of {path} --- \n{count} words found in the document \n")
     for key, value in alphabet.items():
         if key.isalpha():
